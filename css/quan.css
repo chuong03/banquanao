@@ -1,0 +1,46 @@
+html {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container-intro-product {
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.name-intro-product {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 7px 0 3px;
+  margin: 5px 0 5px 0;
+}
+
+.content-intro-product {
+  display: block;
+  font-size: 12px;
+  color: #979696;
+  line-height: 1.35;
+}
+
+h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.heading-product {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}

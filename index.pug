@@ -1,0 +1,136 @@
+include ./pug/mixin.pug
+
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Home
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=DM+Sans:opsz,wght@9..40,500&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='./css/style.css')
+    link(rel="stylesheet", href="./js/cart.js")
+    link(rel='stylesheet', href='./css/footerStyle.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    header
+      .container-header
+        a(href="./index.html").header-logo LEVENTS
+        .navbar-list
+            nav.primary-navigation(role='navigation')
+              ul
+                li
+                  a(href='../index.html') TRANG CHỦ
+                li
+                  a(href='#') SẢN PHẨM &dtrif;
+                  ul.dropdown
+                    li
+                      a(href='./pages/quan.html') QUẦN
+                    li
+                      a(href='./pages/ao.html') ÁO
+                    li
+                      a(href='./pages/phukien.html') PHỤ KIỆN
+                    li
+                      a(href='./pages/giay.html') GIÀY
+                li
+                  a(href='./pages/about.html') VỀ CHÚNG TÔI
+                li
+                  a(href='../pages/contact.html') LIÊN HỆ
+
+        .header-actions
+          a(href="./pages/sign-in.html")
+              img(src="./images/user.png", alt="")
+          a#cart-link(href='./pages/cart.html')
+              img(src='./images/cart.png' alt='')
+          a(href="")
+              img(src="./images/lovely.png", alt="")
+
+        #cart.hidden
+          h2 Cart
+          ul#cart-items
+
+        script(src='./js/cart.js')
+    .categories
+      img(src="./images/quang-cao-ao.webp", alt="")
+    .content-categories
+      h2.title-categories QUẦN ÁO HẰNG NGÀY
+      a(href="").button MUA NGAY
+    main
+      .container
+          .intro-product
+              img(src="./images/category-1.jpg", alt="")
+              img(src="./images/category-2.jpg", alt="")
+              img(src="./images/category-3.jpg", alt="")
+
+          .feature-product 
+              h2 SẢN PHẨM NỔI BẬT
+              .feature-product-list
+                  +product("./images/product-1.jpg", "Áo phông", "700.000đ")
+                  +product("./images/product-2.jpg", "Giày thể thao", "2.100.000đ")
+                  +product("./images/product-3.jpg", "Quần jogger", "1.500.000đ")
+                  +product("./images/product-4.jpg", "Áo thể thao", "500.000đ")
+          .latest-product 
+              h2 SẢN PHẨM MỚI NHẤT
+              .latest-product-list
+                +product("./images/product-5.jpg", "Giày cao cổ", "2.100.000đ")
+                +product("./images/product-6.jpg", "Áo phông", "450.000đ")
+                +product("./images/product-7.jpg", "Tất", "200.000đ")
+                +product("./images/product-8.jpg", "Đồng hồ", "5.100.000đ")
+          
+    footer.footer
+      .container
+        .row
+          .footer-col
+            h4 Về chúng tôi
+            h5 Levents
+            ul
+              p
+          .footer-col
+            h4 Liên hệ
+            p
+              | Hotline
+              br
+              | 1900 633 028
+          .footer-col
+            h4 Danh mục sản phẩm
+            ul
+              li
+                a(href='#') Tất cả
+              li
+                a(href='#') New Arrival
+              li
+                a(href='#') Áo
+              li
+                a(href='#') Quần
+              li
+                a(href='#') Outerware
+              li
+                a(href='#') Ba lô
+              li
+                a(href='#') Phụ kiện
+              li
+                a(href='#') BST
+          .footer-col
+            h4 Hỗ trợ
+            ul
+              li
+                a(href='#') Tài khoản
+              li
+                a(href='#') Chính sách vận chuyển
+              li
+                a(href='#') Chính sách thanh toán
+              li
+                a(href='#') Chính sách bảo mật
+              li
+                a(href='#') Chính sách bảo hành
+              li
+                a(href='#') Chính sách khiếu nại
+          .footer-col
+            h4 follow us
+            .social-links
+              a(href='#', class='fa fa-facebook')
+              a(href='#', class='fa fa-twitter')
+      .endpage
+
+        

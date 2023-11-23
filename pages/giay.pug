@@ -1,0 +1,133 @@
+include ../pug/mixin.pug
+
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Home
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=DM+Sans:opsz,wght@9..40,500&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='../css/style.css')
+    link(rel='stylesheet', href='../css/quan.css')
+    link(rel="stylesheet", href="../css/giay.css")
+    link(rel="stylesheet", href="./js/cart.js")
+    link(rel='stylesheet', href='../css/footerStyle.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    header
+      .container-header
+        a(href="../index.html").header-logo LEVENTS
+        .navbar-list
+            nav.primary-navigation(role='navigation')
+              ul
+                li
+                  a(href='../index.html') TRANG CHỦ
+                li
+                  a(href='#') SẢN PHẨM &dtrif;
+                  ul.dropdown
+                    li
+                      a(href='quan.html') QUẦN
+                    li
+                      a(href='ao.html') ÁO
+                    li
+                      a(href='phukien.html') PHỤ KIỆN
+                    li
+                      a(href='giay.html') GIÀY
+                li
+                  a(href='about.html') VỀ CHÚNG TÔI
+                li
+                  a(href='../pages/contact.html') LIÊN HỆ
+
+        .header-actions
+          a(href="./pages/sign-in.html")
+              img(src="./images/user.png", alt="")
+          a#cart-link(href='./pages/cart.html')
+              img(src='./images/cart.png' alt='')
+          a(href="")
+              img(src="./images/lovely.png", alt="")
+
+    main
+        h2.heading-product SẢN PHẨM BÁN CHẠY
+        .feature-product-list
+            +product("https://product.hstatic.net/1000230642/product/dsmh03600__6__a71093856cda4c5d9336e78426d64932_large.jpg", "Giày Thể Thao Nam Biti's Hunter Street Mid Americano DSMH03600", "804,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/z4389356513774_b45058429ad8eff943b7efaa0bdfa907_901b6600908f46ef983e4f6eb2ef6dce_large.jpg", "Giày Thể Thao Cao Cấp Nữ Biti's Hunter X Layered Upper", "902,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/dsmh05000xam__7__1eef9705616447ed9de490c30692d10a_large.jpg", "Giày Thể Thao Cao Cấp Nam Biti's Hunter Core Classic DSMH05000", "771,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/dswh06200trg39_4__07be906bc1bc4d3ba9ee1294da6f9bb5_large.jpg", "Giày Thể Thao Nam Biti's Hunter Street Z Collection DSMH06200", "814,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/dsc_0016_7dcbe3d255e84324b3d5753ea31190b8_large.jpg", "Giày Thể Thao Nam Biti’s Hunter Core Z Collection DSMH06400", "755,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/o-cap-nam-biti-s-hunter-layered-upper-dsmh02800den-den-mqo8t-color-den_2065ee169a6446e283af17c4f1f4b8db_large.jpg", "Giày Thể Thao Cao Cấp Nam Biti's Hunter Layered Upper DSMH02800", "971,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/giay-di-bo-nu-biti-s-hunter-jogging-soft-dswh05300-6j2lf-color-hong_2a52b78803494ef39635b0bdfa6c9463_large.jpg", "Giày Đi Bộ Nữ Biti's Hunter Jogging DSWH05300", "638,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/dsmh09700trg__3__12926ac17e064f4da133526d58ae5813_large.jpg", "[Phiên Bản Kỷ Niệm 40 Năm] Giày Thể Thao Nam Hunter X", "1,187,000 ₫")
+
+
+        h2.heading-product CÁC SẢN PHẨM KHÁC
+        .feature-product-list
+            +product("https://product.hstatic.net/1000230642/product/bsm000900trg__10__15bdc90d01fd4cb6b292429566540855_large.jpg", "Giày Thể Thao Nam Biti's BSM000900", "751,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/bsm000700den__10__efebd1bbab244635bd3a2241db88d801_large.jpg", "Giày Thể Thao Thông Dụng Nam Biti's BSM000700", "427,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsw002300kem__1__bb35a785d1254d8eb69ead6b2ceaa005_large.jpg", "Giày Thể Thao Nữ Biti's Hunter X HSW002300", "1,177,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsm003900cam__10__46c967ac5d78497e9e8bf4080e528398_large.jpg", "Giày Thể Thao Nam Biti’s Hunter Street HSM003900", "741,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsm003900den__5__85c997a5325d49b2b4537812a3fa10da_large.jpg", "Giày Thể Thao Nữ Biti’s Hunter Street HSW003900", "741,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsm003200nau__4__a3f3d8a1e4964c079c09e38106c3915f_large.jpg", "Giày Thể Thao Nam Biti's Hunter Core HSM003200", "834,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsm002900xnh__4__7c2da95a6f1946fdac01ae501f76e8ad_large.jpg", "Giày Thể Thao Nam Biti’s Hunter HSM002900", "1,305,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsw003100xdg__4__351a1b6f5ede4fe2acd3536796f7887c_large.jpg", "Giày Thể Thao Nữ Biti's Hunter X HSW003100", "932,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsw002400hog__3__36472778443842fca3b344aba4870847_large.jpg", "Giày Thể Thao Nữ Biti's Hunter Core HSW002400", "736,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsm003100kem__4__6b8b13c859e94a6a9115c5f8cc270d5e_large.jpg", "Giày Thể Thao Nam Biti's Hunter X HSM003100", "981,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/hsm002400xam__4__edc1e5a48bfc481f8908bbbbfbdae13c_large.jpg", "Giày Thể Thao Nam Biti's Hunter Core HSM002400", "736,000 ₫")
+            +product("https://product.hstatic.net/1000230642/product/bsm000600trg__10__d11598e4335346a9a2e019c692c2f3f0_large.jpg", "Giày Thể Thao Thông Dụng Nữ Biti's Basic BSW000600", "344,000 ₫")
+            +product("", "", "")
+            +product("", "", "")
+  footer.footer
+      .container
+        .row
+          .footer-col
+            h4 Về chúng tôi
+            h5 Levents
+            ul
+              p
+          .footer-col
+            h4 Liên hệ
+            p
+              | Hotline
+              br
+              | 1900 633 028
+          .footer-col
+            h4 Danh mục sản phẩm
+            ul
+              li
+                a(href='#') Tất cả
+              li
+                a(href='#') New Arrival
+              li
+                a(href='#') Áo
+              li
+                a(href='#') Quần
+              li
+                a(href='#') Outerware
+              li
+                a(href='#') Ba lô
+              li
+                a(href='#') Phụ kiện
+              li
+                a(href='#') BST
+          .footer-col
+            h4 Hỗ trợ
+            ul
+              li
+                a(href='#') Tài khoản
+              li
+                a(href='#') Chính sách vận chuyển
+              li
+                a(href='#') Chính sách thanh toán
+              li
+                a(href='#') Chính sách bảo mật
+              li
+                a(href='#') Chính sách bảo hành
+              li
+                a(href='#') Chính sách khiếu nại
+          .footer-col
+            h4 follow us
+            .social-links
+              a(href='#', class='fa fa-facebook')
+              a(href='#', class='fa fa-twitter')
+      .endpage

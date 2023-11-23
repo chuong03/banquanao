@@ -1,0 +1,12 @@
+mixin product(image,name,price)
+    a(href="").product 
+        img(src=image, alt="").product-img
+        p.name-product= name
+        p.price-product= price
+    //- button.add-to-cart Thêm vào giỏ hàng
+
+mixin intro-products(image, name ,content)
+    .intro-products
+        img(src=image, alt="").img-intro-product
+        p.name-intro-product= name
+        p.content-intro-product= content

@@ -1,0 +1,134 @@
+include ../pug/mixin.pug
+
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Home
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=DM+Sans:opsz,wght@9..40,500&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='../css/style.css')
+    link(rel='stylesheet', href='../css/quan.css')
+    link(rel="stylesheet", href="./js/cart.js")
+    link(rel='stylesheet', href='../css/footerStyle.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    header
+      .container-header
+        a(href="../index.html").header-logo LEVENTS
+        .navbar-list
+            nav.primary-navigation(role='navigation')
+              ul
+                li
+                  a(href='../index.html') TRANG CHỦ
+                li
+                  a(href='#') SẢN PHẨM &dtrif;
+                  ul.dropdown
+                    li
+                      a(href='quan.html') QUẦN
+                    li
+                      a(href='ao.html') ÁO
+                    li
+                      a(href='phukien.html') PHỤ KIỆN
+                    li
+                      a(href='giay.html') GIÀY
+                li
+                  a(href='about.html') VỀ CHÚNG TÔI
+                li
+                  a(href='../pages/contact.html') LIÊN HỆ
+
+        .header-actions
+          a(href="./pages/sign-in.html")
+              img(src="./images/user.png", alt="")
+          a#cart-link(href='./pages/cart.html')
+              img(src='./images/cart.png' alt='')
+          a(href="")
+              img(src="./images/lovely.png", alt="")
+
+    main
+        h3 Giới thiệu sản phẩm
+        .container-intro-product
+            +intro-products("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=80,format=auto/uploads/January2023/bambooGroup_45.jpg", "Vải Bamboo (sợi tre)", "Mang những đặc tính từ sợi tre tự nhiên là sự kháng khuẩn hiệu quả")
+
+            +intro-products("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=80,format=auto/uploads/January2023/cafeGroup_47.jpg", "Vải Café", "Mang tính năng vượt trội từ cafe: mềm mại và khử mùi hiệu quả")
+
+            +intro-products("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=80,format=auto/uploads/October2023/aoinMask_group.jpg", "Áo thun in", "")
+
+            +intro-products("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=80,format=auto/uploads/October2023/aohinhMask_group.jpg", "Áo thun trơn", "")
+
+        h2.heading-product Quần Dài Nam
+        .feature-product-list
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/March2023/uIMG_1059_copy.jpg", "Sơ mi dài tay Café-DriS", "429.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2021/uSomi_xanhden_dai-076_copy.jpg", "Sơ mi dài tay Easycare", "199.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/October2023/T-Shirt_Cotton_Compact.2_66.jpg", "T-Shirt Cotton Team Whales", "349.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/October2023/lol-tw2.2.jpg", "T-Shirt thể thao Team Whales", "499.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/March2022/6-0.jpg", "T-Shirt Excool cổ tròn", "159.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/September2023/newcacoa3.jpg", "T-Shirt Cotton 200GSM", "139.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/May2023/Tee_Copper_den_1A2.jpg", "T-Shirt phối Jeans", "259.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/August2023/AT220-26.jpg", "T-Shirt Cotton 220GSM", "169.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/July2023/Tu_hao_den_chi_tiet_1.jpg", "T-Shirt Care & Share Tự hào", "129.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/March2023/Ao_thun_Marvel_Ironman_has_a_heart12.jpg", "T-Shirt Iron Man", "150.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/February2023/_CMM3370.jpg.jpg", "T-Shirt Giant-man", "140.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/ao-thun-marvel-logo-spiderman-xanh-la-1.jpg", "T-Shirt Logo & Spiderman", "150.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/April2022/tfiys2x.png", "T-Shirt The Future Is Yours", "179.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/April2022/peace2x.png", "T-Shirt Peace", "179.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2021/1426x2100.jpg", "T-Shirt Cotton Compact Premium", "169.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/ao-thun-marvel-strong-together-xanh-duong-3.jpg", "T-Shirt Strong Together", "150.000đ")
+            +product("", "", "")
+
+  footer.footer
+      .container
+        .row
+          .footer-col
+            h4 Về chúng tôi
+            h5 Levents
+            ul
+              p
+          .footer-col
+            h4 Liên hệ
+            p
+              | Hotline
+              br
+              | 1900 633 028
+          .footer-col
+            h4 Danh mục sản phẩm
+            ul
+              li
+                a(href='#') Tất cả
+              li
+                a(href='#') New Arrival
+              li
+                a(href='#') Áo
+              li
+                a(href='#') Quần
+              li
+                a(href='#') Outerware
+              li
+                a(href='#') Ba lô
+              li
+                a(href='#') Phụ kiện
+              li
+                a(href='#') BST
+          .footer-col
+            h4 Hỗ trợ
+            ul
+              li
+                a(href='#') Tài khoản
+              li
+                a(href='#') Chính sách vận chuyển
+              li
+                a(href='#') Chính sách thanh toán
+              li
+                a(href='#') Chính sách bảo mật
+              li
+                a(href='#') Chính sách bảo hành
+              li
+                a(href='#') Chính sách khiếu nại
+          .footer-col
+            h4 follow us
+            .social-links
+              a(href='#', class='fa fa-facebook')
+              a(href='#', class='fa fa-twitter')
+      .endpage

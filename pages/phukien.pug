@@ -1,0 +1,131 @@
+include ../pug/mixin.pug
+
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Home
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=DM+Sans:opsz,wght@9..40,500&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='../css/style.css')
+    link(rel='stylesheet', href='../css/quan.css')
+    link(rel="stylesheet", href="../css/phukien.css")
+    link(rel="stylesheet", href="./js/cart.js")
+    link(rel='stylesheet', href='../css/footerStyle.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    header
+      .container-header
+        a(href="../index.html").header-logo LEVENTS
+        .navbar-list
+            nav.primary-navigation(role='navigation')
+              ul
+                li
+                  a(href='../index.html') TRANG CHỦ
+                li
+                  a(href='#') SẢN PHẨM &dtrif;
+                  ul.dropdown
+                    li
+                      a(href='quan.html') QUẦN
+                    li
+                      a(href='ao.html') ÁO
+                    li
+                      a(href='phukien.html') PHỤ KIỆN
+                    li
+                      a(href='giay.html') GIÀY
+                li
+                  a(href='about.html') VỀ CHÚNG TÔI
+                li
+                  a(href='../pages/contact.html') LIÊN HỆ
+
+        .header-actions
+          a(href="./pages/sign-in.html")
+              img(src="./images/user.png", alt="")
+          a#cart-link(href='./pages/cart.html')
+              img(src='./images/cart.png' alt='')
+          a(href="")
+              img(src="./images/lovely.png", alt="")
+
+    .categories
+        img(src="https://media.coolmate.me/cdn-cgi/image/width=1920,quality=80,format=auto/uploads/September2022/PC_-_CAN_GIUA-2.jpg", alt="")
+
+    main
+        //- h3 Giới thiệu sản phẩm
+        //- .container-intro-product
+        //-     +intro-products("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=80,format=auto/uploads/January2023/joogerMask_group.jpg", "Quần Jogger", "Độ dày vừa phải, co giãn tối đa đảm bảo sự thoải mái trong mọi hoạt động")
+
+        //-     +intro-products("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=80,format=auto/uploads/January2023/kakiMask_group.jpg", "Quần Kaki", "Quần dài kaki hoàn toàn vừa vặn và lịch sự để đi làm hoặc đi chơi, đi cafe")
+
+        //-     +intro-products("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=80,format=auto/uploads/January2023/jeanMask_group.jpg", "Quần Jeans", "Những chiếc quần Jeans đủ thoải mái và phù hợp mọi hoạt động")
+
+        h2.heading-product PHỤ KIỆN
+        .feature-product-list
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/May2023/cotton-supima-thumb-5s.jpg", "Combo 3 Tất Cotton Supima", "149.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/May2023/cotton-supima-thumb-20.jpg", "Combo 3 Tất Cotton Supima", "149.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/July2022/_PHD1044_99.jpg", "Combo 4 Tất Cotton", "129.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/July2023/DSCF9804.jpg", "Găng tay đa năng chống tia UV", "79.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/mu-classic-cap-theu-logo-coolmate-xanh-navy-2_3.jpg", "Mũ lưỡi trai Classic Cap", "139.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2022/anh-mau-mu-tech-cap-theu-logo-coolmate-2.jpg", "Mũ lưỡi trai Tech Cap", "139.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/October2023/23CMAW.TA003.10.3.jpg", "Tất chạy bộ Active", "60.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/April2023/_CMM6539_25.jpg", "Mũ lưỡi trai kaki Care & Share", "189.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2021/box3.jpg", "Bucket Hat Care & Share", "169.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/November2021/hand.jpg", "Bucket Hat Care & Share", "169.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/June2023/tui_trong_gym-3.jpg", "Túi trống Gym", "329.000đ")
+            +product("https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/July2022/6-1_7.jpg", "Mũ lưỡi trai Baseball Cap", "149.000đ")
+
+  footer.footer
+      .container
+        .row
+          .footer-col
+            h4 Về chúng tôi
+            h5 Levents
+            ul
+              p
+          .footer-col
+            h4 Liên hệ
+            p
+              | Hotline
+              br
+              | 1900 633 028
+          .footer-col
+            h4 Danh mục sản phẩm
+            ul
+              li
+                a(href='#') Tất cả
+              li
+                a(href='#') New Arrival
+              li
+                a(href='#') Áo
+              li
+                a(href='#') Quần
+              li
+                a(href='#') Outerware
+              li
+                a(href='#') Ba lô
+              li
+                a(href='#') Phụ kiện
+              li
+                a(href='#') BST
+          .footer-col
+            h4 Hỗ trợ
+            ul
+              li
+                a(href='#') Tài khoản
+              li
+                a(href='#') Chính sách vận chuyển
+              li
+                a(href='#') Chính sách thanh toán
+              li
+                a(href='#') Chính sách bảo mật
+              li
+                a(href='#') Chính sách bảo hành
+              li
+                a(href='#') Chính sách khiếu nại
+          .footer-col
+            h4 follow us
+            .social-links
+              a(href='#', class='fa fa-facebook')
+              a(href='#', class='fa fa-twitter')
+      .endpage

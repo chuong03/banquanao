@@ -1,0 +1,10 @@
+.categories img {
+  border-style: none;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.heading-product {
+  margin-top: 20px;
+}
